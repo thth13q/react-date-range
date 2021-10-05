@@ -64,7 +64,7 @@ class DateInput extends PureComponent {
   };
 
   render() {
-    const { className, readOnly, placeholder, ariaLabel, disabled, onFocus } = this.props;
+    const { readOnly, placeholder, ariaLabel, disabled, onFocus } = this.props;
     const { value, invalid } = this.state;
 
     return (
@@ -79,7 +79,7 @@ class DateInput extends PureComponent {
           onChange={this.onChange}
           onBlur={this.onBlur}
           onFocus={onFocus}
-          className={styles.dateRangeInput}
+          className="rdrDateRangeInput"
         />
         {invalid && <span className="rdrWarning">&#9888;</span>}
       </>
