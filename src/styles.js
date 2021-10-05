@@ -50,4 +50,6 @@ export default {
   infiniteMonths: 'rdrInfiniteMonths',
   monthsVertical: 'rdrMonthsVertical',
   monthsHorizontal: 'rdrMonthsHorizontal',
+  dateDisplayText: 'rdrDateDisplayText',
+  dateDisplayGroup: 'rdrDateDisplayGroup',
 };

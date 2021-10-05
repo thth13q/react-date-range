@@ -55,6 +55,8 @@ var _default = {
   monthName: 'rdrMonthName',
   infiniteMonths: 'rdrInfiniteMonths',
   monthsVertical: 'rdrMonthsVertical',
-  monthsHorizontal: 'rdrMonthsHorizontal'
+  monthsHorizontal: 'rdrMonthsHorizontal',
+  dateDisplayText: 'rdrDateDisplayText',
+  dateDisplayGroup: 'rdrDateDisplayGroup'
 };
 exports.default = _default;
