@@ -359,6 +359,8 @@ var Calendar = /*#__PURE__*/function (_PureComponent) {
           style: {
             color: range.color || defaultColor
           }
+        }, /*#__PURE__*/_react.default.createElement("div", {
+          className: styles.dateDisplayGroup
         }, /*#__PURE__*/_react.default.createElement("span", {
           className: styles.dateDisplayText
         }, "\u041F\u043E\u0434\u0430\u0447\u0430 -"), /*#__PURE__*/_react.default.createElement(_DateInput.default, {
@@ -374,7 +376,9 @@ var Calendar = /*#__PURE__*/function (_PureComponent) {
           onFocus: function onFocus() {
             return _this.handleRangeFocusChange(i, 0);
           }
-        }), /*#__PURE__*/_react.default.createElement("span", {
+        })), /*#__PURE__*/_react.default.createElement("div", {
+          className: styles.dateDisplayGroup
+        }, /*#__PURE__*/_react.default.createElement("span", {
           className: styles.dateDisplayText
         }, "\u0412\u043E\u0437\u0432\u0440\u0430\u0442 -"), /*#__PURE__*/_react.default.createElement(_DateInput.default, {
           className: (0, _classnames3.default)(styles.dateDisplayItem, _defineProperty({}, styles.dateDisplayItemActive, focusedRange[0] === i && focusedRange[1] === 1)),
@@ -389,7 +393,7 @@ var Calendar = /*#__PURE__*/function (_PureComponent) {
           onFocus: function onFocus() {
             return _this.handleRangeFocusChange(i, 1);
           }
-        }));
+        })));
       }));
     });
 
@@ -750,7 +754,7 @@ Calendar.defaultProps = {
   locale: _enUS.default,
   ranges: [],
   focusedRange: [0, 0],
-  dateDisplayFormat: 'dd.mm.yyyy',
+  dateDisplayFormat: 'dd.MM.yyyy',
   monthDisplayFormat: 'MMM yyyy',
   weekdayDisplayFormat: 'E',
   dayDisplayFormat: 'd',

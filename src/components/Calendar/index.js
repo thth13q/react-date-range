@@ -297,44 +297,48 @@ class Calendar extends PureComponent {
               className={styles.dateDisplay}
               key={i}
               style={{ color: range.color || defaultColor }}>
-              <span className={styles.dateDisplayText}>Подача -</span>
-              <DateInput
-                className={classnames(styles.dateDisplayItem, {
-                  [styles.dateDisplayItemActive]: focusedRange[0] === i && focusedRange[1] === 0,
-                })}
-                readOnly={!editableDateInputs}
-                disabled={range.disabled}
-                value={range.startDate}
-                placeholder={startDatePlaceholder}
-                dateOptions={this.dateOptions}
-                dateDisplayFormat={dateDisplayFormat}
-                ariaLabel={
-                  ariaLabels.dateInput &&
-                  ariaLabels.dateInput[range.key] &&
-                  ariaLabels.dateInput[range.key].startDate
-                }
-                onChange={this.onDragSelectionEnd}
-                onFocus={() => this.handleRangeFocusChange(i, 0)}
-              />
-              <span className={styles.dateDisplayText}>Возврат -</span>
-              <DateInput
-                className={classnames(styles.dateDisplayItem, {
-                  [styles.dateDisplayItemActive]: focusedRange[0] === i && focusedRange[1] === 1,
-                })}
-                readOnly={!editableDateInputs}
-                disabled={range.disabled}
-                value={range.endDate}
-                placeholder={endDatePlaceholder}
-                dateOptions={this.dateOptions}
-                dateDisplayFormat={dateDisplayFormat}
-                ariaLabel={
-                  ariaLabels.dateInput &&
-                  ariaLabels.dateInput[range.key] &&
-                  ariaLabels.dateInput[range.key].endDate
-                }
-                onChange={this.onDragSelectionEnd}
-                onFocus={() => this.handleRangeFocusChange(i, 1)}
-              />
+              <div className={styles.dateDisplayGroup}>
+                <span className={styles.dateDisplayText}>Подача -</span>
+                <DateInput
+                  className={classnames(styles.dateDisplayItem, {
+                    [styles.dateDisplayItemActive]: focusedRange[0] === i && focusedRange[1] === 0,
+                  })}
+                  readOnly={!editableDateInputs}
+                  disabled={range.disabled}
+                  value={range.startDate}
+                  placeholder={startDatePlaceholder}
+                  dateOptions={this.dateOptions}
+                  dateDisplayFormat={dateDisplayFormat}
+                  ariaLabel={
+                    ariaLabels.dateInput &&
+                    ariaLabels.dateInput[range.key] &&
+                    ariaLabels.dateInput[range.key].startDate
+                  }
+                  onChange={this.onDragSelectionEnd}
+                  onFocus={() => this.handleRangeFocusChange(i, 0)}
+                />
+              </div>
+              <div className={styles.dateDisplayGroup}>
+                <span className={styles.dateDisplayText}>Возврат -</span>
+                <DateInput
+                  className={classnames(styles.dateDisplayItem, {
+                    [styles.dateDisplayItemActive]: focusedRange[0] === i && focusedRange[1] === 1,
+                  })}
+                  readOnly={!editableDateInputs}
+                  disabled={range.disabled}
+                  value={range.endDate}
+                  placeholder={endDatePlaceholder}
+                  dateOptions={this.dateOptions}
+                  dateDisplayFormat={dateDisplayFormat}
+                  ariaLabel={
+                    ariaLabels.dateInput &&
+                    ariaLabels.dateInput[range.key] &&
+                    ariaLabels.dateInput[range.key].endDate
+                  }
+                  onChange={this.onDragSelectionEnd}
+                  onFocus={() => this.handleRangeFocusChange(i, 1)}
+                />
+              </div>
             </div>
           );
         })}
@@ -540,7 +544,7 @@ Calendar.defaultProps = {
   locale: defaultLocale,
   ranges: [],
   focusedRange: [0, 0],
-  dateDisplayFormat: 'dd.mm.yyyy',
+  dateDisplayFormat: 'dd.MM.yyyy',
   monthDisplayFormat: 'MMM yyyy',
   weekdayDisplayFormat: 'E',
   dayDisplayFormat: 'd',
