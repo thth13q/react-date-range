@@ -57,6 +57,7 @@ var _default = {
   monthsVertical: 'rdrMonthsVertical',
   monthsHorizontal: 'rdrMonthsHorizontal',
   dateDisplayText: 'rdrDateDisplayText',
-  dateDisplayGroup: 'rdrDateDisplayGroup'
+  dateDisplayGroup: 'rdrDateDisplayGroup',
+  dateInput: 'rdrDateInput'
 };
 exports.default = _default;

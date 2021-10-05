@@ -157,9 +157,7 @@ var DateInput = /*#__PURE__*/function (_PureComponent) {
       var _this$state2 = this.state,
           value = _this$state2.value,
           invalid = _this$state2.invalid;
-      return /*#__PURE__*/_react.default.createElement("span", {
-        className: (0, _classnames.default)('rdrDateInput', className)
-      }, /*#__PURE__*/_react.default.createElement("input", {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("input", {
         readOnly: readOnly,
         disabled: disabled,
         value: value,
@@ -168,7 +166,8 @@ var DateInput = /*#__PURE__*/function (_PureComponent) {
         onKeyDown: this.onKeyDown,
         onChange: this.onChange,
         onBlur: this.onBlur,
-        onFocus: onFocus
+        onFocus: onFocus,
+        className: styles.dateInput
       }), invalid && /*#__PURE__*/_react.default.createElement("span", {
         className: "rdrWarning"
       }, "\u26A0"));
