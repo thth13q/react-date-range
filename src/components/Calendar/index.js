@@ -297,6 +297,7 @@ class Calendar extends PureComponent {
               className={styles.dateDisplay}
               key={i}
               style={{ color: range.color || defaultColor }}>
+              <span className={styles.dateDisplayText}>Подача -</span>
               <DateInput
                 className={classnames(styles.dateDisplayItem, {
                   [styles.dateDisplayItemActive]: focusedRange[0] === i && focusedRange[1] === 0,
@@ -315,6 +316,7 @@ class Calendar extends PureComponent {
                 onChange={this.onDragSelectionEnd}
                 onFocus={() => this.handleRangeFocusChange(i, 0)}
               />
+              <span className={styles.dateDisplayText}>Возврат -</span>
               <DateInput
                 className={classnames(styles.dateDisplayItem, {
                   [styles.dateDisplayItemActive]: focusedRange[0] === i && focusedRange[1] === 1,
@@ -538,7 +540,7 @@ Calendar.defaultProps = {
   locale: defaultLocale,
   ranges: [],
   focusedRange: [0, 0],
-  dateDisplayFormat: 'MMM d, yyyy',
+  dateDisplayFormat: 'dd.mm.yyyy',
   monthDisplayFormat: 'MMM yyyy',
   weekdayDisplayFormat: 'E',
   dayDisplayFormat: 'd',
