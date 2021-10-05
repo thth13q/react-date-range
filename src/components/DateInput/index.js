@@ -79,7 +79,7 @@ class DateInput extends PureComponent {
           onChange={this.onChange}
           onBlur={this.onBlur}
           onFocus={onFocus}
-          className={styles.dateInput}
+          className={styles.dateRangeInput}
         />
         {invalid && <span className="rdrWarning">&#9888;</span>}
       </>

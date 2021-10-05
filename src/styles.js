@@ -52,5 +52,5 @@ export default {
   monthsHorizontal: 'rdrMonthsHorizontal',
   dateDisplayText: 'rdrDateDisplayText',
   dateDisplayGroup: 'rdrDateDisplayGroup',
-  dateInput: 'rdrDateInput',
+  dateRangeInput: 'rdrDateRangeInput',
 };

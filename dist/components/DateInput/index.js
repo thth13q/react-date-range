@@ -167,7 +167,7 @@ var DateInput = /*#__PURE__*/function (_PureComponent) {
         onChange: this.onChange,
         onBlur: this.onBlur,
         onFocus: onFocus,
-        className: styles.dateInput
+        className: styles.dateRangeInput
       }), invalid && /*#__PURE__*/_react.default.createElement("span", {
         className: "rdrWarning"
       }, "\u26A0"));
