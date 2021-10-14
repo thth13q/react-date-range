@@ -148,7 +148,6 @@ var DateInput = /*#__PURE__*/function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
-          className = _this$props2.className,
           readOnly = _this$props2.readOnly,
           placeholder = _this$props2.placeholder,
           ariaLabel = _this$props2.ariaLabel,

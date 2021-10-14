@@ -298,7 +298,7 @@ class Calendar extends PureComponent {
               key={i}
               style={{ color: range.color || defaultColor }}>
               <div className={styles.dateDisplayGroup}>
-                <span className={styles.dateDisplayText}>Подача -</span>
+                <span className={styles.dateDisplayText}>{this.props.inning} -</span>
                 <DateInput
                   className={classnames(styles.dateDisplayItem, {
                     [styles.dateDisplayItemActive]: focusedRange[0] === i && focusedRange[1] === 0,
@@ -319,7 +319,7 @@ class Calendar extends PureComponent {
                 />
               </div>
               <div className={styles.dateDisplayGroup}>
-                <span className={styles.dateDisplayText}>Возврат -</span>
+                <span className={styles.dateDisplayText}>{this.props.return} -</span>
                 <DateInput
                   className={classnames(styles.dateDisplayItem, {
                     [styles.dateDisplayItemActive]: focusedRange[0] === i && focusedRange[1] === 1,

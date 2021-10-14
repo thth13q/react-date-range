@@ -363,7 +363,7 @@ var Calendar = /*#__PURE__*/function (_PureComponent) {
           className: styles.dateDisplayGroup
         }, /*#__PURE__*/_react.default.createElement("span", {
           className: styles.dateDisplayText
-        }, "\u041F\u043E\u0434\u0430\u0447\u0430 -"), /*#__PURE__*/_react.default.createElement(_DateInput.default, {
+        }, _this.props.inning, " -"), /*#__PURE__*/_react.default.createElement(_DateInput.default, {
           className: (0, _classnames3.default)(styles.dateDisplayItem, _defineProperty({}, styles.dateDisplayItemActive, focusedRange[0] === i && focusedRange[1] === 0)),
           readOnly: !editableDateInputs,
           disabled: range.disabled,
@@ -380,7 +380,7 @@ var Calendar = /*#__PURE__*/function (_PureComponent) {
           className: styles.dateDisplayGroup
         }, /*#__PURE__*/_react.default.createElement("span", {
           className: styles.dateDisplayText
-        }, "\u0412\u043E\u0437\u0432\u0440\u0430\u0442 -"), /*#__PURE__*/_react.default.createElement(_DateInput.default, {
+        }, _this.props.return, " -"), /*#__PURE__*/_react.default.createElement(_DateInput.default, {
           className: (0, _classnames3.default)(styles.dateDisplayItem, _defineProperty({}, styles.dateDisplayItemActive, focusedRange[0] === i && focusedRange[1] === 1)),
           readOnly: !editableDateInputs,
           disabled: range.disabled,
